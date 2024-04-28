@@ -27,6 +27,6 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: simple-flask-app
+  base-directory: .
   name: build-artifact-name
   discard-paths: no
