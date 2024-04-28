@@ -28,3 +28,5 @@ artifacts:
   files:
     - '**/*'
   base-directory: ../simple-flask-app
+  name: build-artifact-name
+  discard-paths: no
