@@ -16,7 +16,7 @@ phases:
   build:
     commands:
       - echo "Running tests......."
-      #- cd simple-flask-app/
+      - cd simple-flask-app/
       - echo "Building Docker image..."
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
       - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-flask-app:latest" .
@@ -24,7 +24,7 @@ phases:
   post_build:
     commands:
       - echo "Build completed successfully!!!!"
-# artifacts:
-#   files:
-#     - '**/*'
-#   base-directory: ../simple-flask-app
+artifacts:
+  files:
+    - '**/*'
+  base-directory: ../simple-flask-app
